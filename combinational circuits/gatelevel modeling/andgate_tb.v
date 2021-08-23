@@ -16,6 +16,6 @@ begin
 #5 {a,b}=2'b11;
 end
 initial
-$monitor("simtime, a=%b, b=%b, y=%b", $time, a,b,y);
+   $monitor("simtime=%0g, a=%b, b=%b, y=%b", $time, a,b,y);
 endmodule
 
