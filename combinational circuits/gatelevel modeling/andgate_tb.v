@@ -6,7 +6,7 @@ andgate ins1(a,b,y);
 initial
 begin
 $dumpfile("andgate.vcd");
-$dumpvars;
+   $dumpvars(1);
 end
 initial
 begin
