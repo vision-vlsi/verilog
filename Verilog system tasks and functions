@@ -1,0 +1,92 @@
+REFERENCE https://www.csee.umbc.edu/portal/help/VHDL/verilog/system.html
+
+Verilog System Tasks and Functions
+
+$display("<format>", exp1, exp2, ...);  // formatted write to display
+  format indication %b %B binary
+                    %c %C character (low 8 bits)
+                    %d %D decimal  %0d for minimum width field
+                    %e %E E format floating point %15.7E
+                    %f %F F format floating point %9.7F
+                    %g %G G general format floating point
+                    %h %H hexadecimal
+                    %l %L library binding information
+                    %m %M hierarchical name, no expression
+                    %o %O octal
+                    %s %S string, 8 bits per character, 2´h00 does not print
+                    %t %T simulation time, expression is  $time
+                    %u %U unformatted two value data  0 and 1 
+                    %v %V net signal strength
+                    %z %Z unformatted four value data  0, 1, x, z
+ 
+  escape sequences, quoted characters in strings \n   newline
+                                                 \t   tab
+                                                 \\   backslash
+                                                 \"   quote
+                                                 \ddd octal
+                                                 %%   percent
+
+  any other characters between the quotes are displayed
+  the expressions are taken in order of the format indication
+  ,, in the expression list inserts one space in the output
+
+$write     // same as $display except no automatic insertion of newline
+$strobe    // same as $display except waits until all events finished
+$monitor   // same as $display except only displays if an expression changes
+$monitoron // only one $monitor may be active at ant time,
+$monitoroff // turn current $monitor off
+
+$displayb  // same as $display using binary as default format
+$writeb    // same as $write using binary as default format
+$strobeb   // same as $strobe using binary as default format
+$monitorb  // same as $monitor using binary as default format
+$displayo  // same as $display using octal as default format
+$writeo    // same as $write using octal as default format
+$strobeo   // same as $strobe using octal as default format
+$monitoro  // same as $monitor using octal as default format
+$displayh  // same as $display using hexadecimal as default format
+$writeh    // same as $write using hexadecimal as default format
+$strobeh   // same as $strobe using hexadecimal as default format
+$monitorh  // same as $monitor using hexadecimal as default format
+
+fd = $fopen("<file name>"); // open a file for writing,
+                              // fd is an integer file descriptor
+fd = $fopen("<file name>", file_type); // open a file for file_type action:
+                                         // open for reading "r", "rb" binary
+                                         // open for writing "w", "wb" binary
+                                         // open for append  "a", "ab" binary
+                                  // open for read/write "r+", "r+b", "rb+"
+                                  // open for write/read "w+", "w+b", "wb+"
+                                  // open for append update "a+", "a+b", "ab+"
+$fclose(fd);  // close an opened file
+$frewind(fd); // rewind an opened file
+$fflush(fd);  // flush pending output to an open file
+$fseek(
+$ftell(
+
+$fdisplay(fd, 
+$fwrite(fd,
+$swrite(??
+$fstrobe(fd,
+$fmonitor(fd,
+$fread(fd,
+$fscanf(fd,
+
+$fdisplayb  // same as $fdisplay using binary as default format
+$fwriteb    // same as $fwrite using binary as default format
+$swriteb    // same as $swrite using binary as default format
+$fstrobeb   // same as $fstrobe using binary as default format
+$fmonitorb  // same as $fmonitor using binary as default format
+$fdisplayo  // same as $fdisplay using octal as default format
+$fwriteo    // same as $fwrite using octal as default format
+$swriteo    // same as $swrite using octal as default format
+$fstrobeo   // same as $fstrobe using octal as default format
+$fmonitoro  // same as $fmonitor using octal as default format
+$fdisplayh  // same as $fdisplay using hexadecimal as default format
+$fwriteh    // same as $fwrite using hexadecimal as default format
+$swriteh    // same as $swrite using hexadecimal as default format
+$fstrobeh   // same as $fstrobe using hexadecimal as default format
+$fmonitorh  // same as $fmonitor using hexadecimal as default format
+
+$sscanf
+$sdf_annotate
