@@ -1,4 +1,4 @@
-module fulladder(a,b,cin,sum,co);
+module full_adder(a,b,cin,sum,co);
   input a,b,cin;
   output sum,co;
   xor(s1,a,b);
