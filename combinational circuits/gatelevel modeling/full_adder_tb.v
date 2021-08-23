@@ -6,7 +6,7 @@ module full_adder_tb;
    initial
     begin
       $dumpfile("fa.vcd");
-      $dumpvars;
+       $dumpvars(1);
     end
   initial
     begin
