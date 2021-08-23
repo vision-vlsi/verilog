@@ -6,7 +6,7 @@ module mux2x1_tb;
   initial
 begin
   $dumpfile("mux2x1.vcd");
-$dumpvars;
+  $dumpvars(1);
 end
 initial
 begin
