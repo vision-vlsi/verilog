@@ -5,8 +5,8 @@ module mux2x1_tb;
    mux2x1 ins1(a,b,s,y);
   initial
 begin
-$dumpfile("andgate.vcd");
-$dumpvars;
+  $dumpfile("mux2x1.vcd");
+ $dumpvars(1);
 end
 initial
 begin
