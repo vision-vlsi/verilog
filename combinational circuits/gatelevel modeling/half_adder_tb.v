@@ -6,7 +6,7 @@ half_adder ha1(a,b,sum,co);
   initial
     begin
       $dumpfile("ha.vcd");
-      $dumpvars;
+      $dumpvars(1);
     end
   initial
     begin
