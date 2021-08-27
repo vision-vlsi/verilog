@@ -9,7 +9,7 @@ $dumpfile("decoder2to4.vcd");
 $dumpvars(1);
 end
 initial begin
-{a1,a0}=2'b00;
+   {a1,a0}=2'b00;
 #5 {a1,a0}=2'b01;
 #5 {a1,a0}=2'b10;
 #5 {a1,a0}=2'b11;
