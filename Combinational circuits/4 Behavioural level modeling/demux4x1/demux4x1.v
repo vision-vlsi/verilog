@@ -12,7 +12,8 @@ module demux4x1(d,s1,s0,y0,y1,y2,y3);
  endcase
 endmodule
 
-//Good code
+//Good code - style-1
+
 module demux4x1(d,s1,s0,y0,y1,y2,y3);
   input d,s1,s0;
   output reg y0,y1,y2,y3;
@@ -25,8 +26,8 @@ module demux4x1(d,s1,s0,y0,y1,y2,y3);
   endcase
 endmodule
 
+//Good code - style-2
 
-//Good code
 module demux4x1(d,s1,s0,y0,y1,y2,y3);
   input d,s1,s0;
   output reg y0,y1,y2,y3;
