@@ -2,7 +2,7 @@
 <h2>
 module rsr(clk,rst,in,out); <br/>
 input clk, rst, in; <br/>
-output oyt; <br/>
+output out; <br/>
 reg [3:0]q; <br/>
 always@(posedge clk) <br/>
 begin <br/>
